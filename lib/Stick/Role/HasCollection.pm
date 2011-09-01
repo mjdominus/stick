@@ -37,10 +37,10 @@ parameter post_action => (
   default => 'add',
 );
 
-parameter default_sort_key => (
-  isa => Str,
+parameter item_class => (
   is => 'ro',
-  required => 0,
+  isa => Str,
+  predicate => 'has_item_class',
 );
 
 # Class name or factory object for the collection itself.
@@ -57,8 +57,7 @@ parameter factory => (
       collection_name => $p->item_collection_name,
       add_this_item => $p->add_this_thing,
       item_array => $p->accessor,
-      post_action => $p->post_action,
-      default_sort_key => $p->default_sort_key,
+      $p->has_item_class ? (item_class => $p->item_class) : (),
     };
 
     my $c = class([ 'Stick::Role::Collection',

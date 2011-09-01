@@ -31,6 +31,12 @@ parameter item_array => (
   required => 1,
 );
 
+parameter item_class => (
+  is => 'ro',
+  isa => Str,
+  required => 1,
+);
+
 role {
   my ($p, %args) = @_;
 

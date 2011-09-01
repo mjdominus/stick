@@ -21,7 +21,9 @@ with (
                           'Stick::Role::Collection::Mutable',
                           'Stick::Role::Collection::CanFilter',
                           't::lib::LibraryExtras',
-                         ]});
+                         ],
+    item_class => 'Book',
+  });
 
 sub book_array {
   my ($self) = @_;

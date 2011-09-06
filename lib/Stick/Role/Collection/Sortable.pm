@@ -1,7 +1,7 @@
 
 package Stick::Role::Collection::Sortable;
 {
-  $Stick::Role::Collection::Sortable::VERSION = '0.305';
+  $Stick::Role::Collection::Sortable::VERSION = '0.306';
 }
 use Carp qw(confess croak);
 use MooseX::Role::Parameterized;
@@ -77,7 +77,7 @@ Stick::Role::Collection::Sortable
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

@@ -1,6 +1,6 @@
 package Stick::WrappedMethod;
 {
-  $Stick::WrappedMethod::VERSION = '0.305';
+  $Stick::WrappedMethod::VERSION = '0.306';
 }
 # ABSTRACT: a handler for an HTTP request
 use Moose;
@@ -52,7 +52,7 @@ Stick::WrappedMethod - a handler for an HTTP request
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

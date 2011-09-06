@@ -1,6 +1,6 @@
 package Stick::Role::Routable::ClassAndInstance;
 {
-  $Stick::Role::Routable::ClassAndInstance::VERSION = '0.305';
+  $Stick::Role::Routable::ClassAndInstance::VERSION = '0.306';
 }
 # ABSTRACT: A class with with routing from itself and from its instances
 use Moose::Role;
@@ -33,7 +33,7 @@ Stick::Role::Routable::ClassAndInstance - A class with with routing from itself 
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

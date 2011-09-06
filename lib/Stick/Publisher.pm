@@ -1,6 +1,6 @@
 package Stick::Publisher;
 {
-  $Stick::Publisher::VERSION = '0.305';
+  $Stick::Publisher::VERSION = '0.306';
 }
 # ABSTRACT: A class that can publish its methods
 use Moose ();
@@ -34,7 +34,7 @@ Stick::Publisher - A class that can publish its methods
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

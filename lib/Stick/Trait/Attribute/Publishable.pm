@@ -1,6 +1,6 @@
 package Stick::Trait::Attribute::Publishable;
 {
-  $Stick::Trait::Attribute::Publishable::VERSION = '0.305';
+  $Stick::Trait::Attribute::Publishable::VERSION = '0.306';
 }
 # ABSTRACT: A trait for an attribute whose accessor is published
 use Moose::Role;
@@ -34,7 +34,7 @@ Stick::Trait::Attribute::Publishable - A trait for an attribute whose accessor i
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

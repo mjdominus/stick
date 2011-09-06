@@ -1,6 +1,6 @@
 package Stick::Util;
 {
-  $Stick::Util::VERSION = '0.305';
+  $Stick::Util::VERSION = '0.306';
 }
 # ABSTRACT: Utility functions used by Stick
 use strict;
@@ -102,7 +102,7 @@ Stick::Util - Utility functions used by Stick
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

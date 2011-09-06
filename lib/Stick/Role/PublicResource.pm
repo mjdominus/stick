@@ -1,6 +1,6 @@
 package Stick::Role::PublicResource;
 {
-  $Stick::Role::PublicResource::VERSION = '0.305';
+  $Stick::Role::PublicResource::VERSION = '0.306';
 }
 # ABSTRACT: An object to which HTTP requests can be routed
 use Moose::Role;
@@ -43,7 +43,7 @@ Stick::Role::PublicResource - An object to which HTTP requests can be routed
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

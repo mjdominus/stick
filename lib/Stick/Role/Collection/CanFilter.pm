@@ -1,6 +1,6 @@
 package Stick::Role::Collection::CanFilter;
 {
-  $Stick::Role::Collection::CanFilter::VERSION = '0.305';
+  $Stick::Role::Collection::CanFilter::VERSION = '0.306';
 }
 use Moose::Role;
 
@@ -26,7 +26,7 @@ Stick::Role::Collection::CanFilter
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

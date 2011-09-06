@@ -1,6 +1,6 @@
 package Stick::Entity::Bool;
 {
-  $Stick::Entity::Bool::VERSION = '0.305';
+  $Stick::Entity::Bool::VERSION = '0.306';
 }
 # ABSTRACT: A boolean value, suitable for wrapping up as JSON
 use Moose;
@@ -32,7 +32,7 @@ Stick::Entity::Bool - A boolean value, suitable for wrapping up as JSON
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

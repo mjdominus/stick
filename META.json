@@ -72,7 +72,7 @@
          "web" : "https://github.com/rjbs/stick"
       }
    },
-   "version" : "0.305",
+   "version" : "0.306",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

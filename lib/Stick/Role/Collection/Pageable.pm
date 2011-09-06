@@ -1,6 +1,6 @@
 package Stick::Role::Collection::Pageable;
 {
-  $Stick::Role::Collection::Pageable::VERSION = '0.305';
+  $Stick::Role::Collection::Pageable::VERSION = '0.306';
 }
 use strict;
 use warnings;
@@ -77,7 +77,7 @@ Stick::Role::Collection::Pageable
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

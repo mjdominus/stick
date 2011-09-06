@@ -1,6 +1,6 @@
 package Stick::Error;
 {
-  $Stick::Error::VERSION = '0.305';
+  $Stick::Error::VERSION = '0.306';
 }
 # ABSTRACT: Stick exception object
 use Moose;
@@ -81,7 +81,7 @@ Stick::Error - Stick exception object
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

@@ -1,6 +1,6 @@
 package Stick::Trait::Application::ToClass;
 {
-  $Stick::Trait::Application::ToClass::VERSION = '0.305';
+  $Stick::Trait::Application::ToClass::VERSION = '0.306';
 }
 # ABSTRACT: Machinery for setting up classes with published methods
 
@@ -38,7 +38,7 @@ Stick::Trait::Application::ToClass - Machinery for setting up classes with publi
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

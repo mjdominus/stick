@@ -1,12 +1,13 @@
 package Stick::Role::HasCollection;
+{
+  $Stick::Role::HasCollection::VERSION = '0.306';
+}
 # ABSTRACT: A class which owns a (routable) collection of objects
 use Stick::Types qw(Factory);
 use Stick::Util qw(class);
 use MooseX::Role::Parameterized;
 use MooseX::Types::Moose qw(Str ArrayRef HashRef Defined);
 use Moose::Util::TypeConstraints qw(subtype union);
-
-our $VERSION = 0.20110802;
 
 # Name of the sort of thing this collection will contain
 # e.g., "refund".
@@ -149,7 +150,7 @@ Stick::Role::HasCollection - A class which owns a (routable) collection of objec
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

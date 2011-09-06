@@ -1,6 +1,6 @@
 package Stick::Role::Collection::Mutable;
 {
-  $Stick::Role::Collection::Mutable::VERSION = '0.305';
+  $Stick::Role::Collection::Mutable::VERSION = '0.306';
 }
 use Moose::Role;
 
@@ -25,7 +25,7 @@ Stick::Role::Collection::Mutable
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

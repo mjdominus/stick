@@ -1,6 +1,6 @@
 package Stick::Role::Routable;
 {
-  $Stick::Role::Routable::VERSION = '0.305';
+  $Stick::Role::Routable::VERSION = '0.306';
 }
 # ABSTRACT: An object that can be routed through
 use Moose::Role;
@@ -56,7 +56,7 @@ Stick::Role::Routable - An object that can be routed through
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

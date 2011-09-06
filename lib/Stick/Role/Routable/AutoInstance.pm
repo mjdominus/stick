@@ -1,6 +1,6 @@
 package Stick::Role::Routable::AutoInstance;
 {
-  $Stick::Role::Routable::AutoInstance::VERSION = '0.305';
+  $Stick::Role::Routable::AutoInstance::VERSION = '0.306';
 }
 # ABSTRACT: A class that provides routes to all its published methods
 use Moose::Role;
@@ -58,7 +58,7 @@ Stick::Role::Routable::AutoInstance - A class that provides routes to all its pu
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

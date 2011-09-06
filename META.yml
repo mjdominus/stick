@@ -51,7 +51,7 @@ requires:
 resources:
   homepage: https://github.com/rjbs/stick
   repository: https://github.com/rjbs/stick
-version: 0.305
+version: 0.306
 x_Dist_Zilla:
   plugins:
     -

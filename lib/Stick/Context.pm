@@ -1,6 +1,6 @@
 package Stick::Context;
 {
-  $Stick::Context::VERSION = '0.305';
+  $Stick::Context::VERSION = '0.306';
 }
 use Moose;
 
@@ -20,7 +20,7 @@ Stick::Context
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

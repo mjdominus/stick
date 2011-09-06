@@ -56,7 +56,7 @@ my %WriteMakefileArgs = (
     'namespace::autoclean' => '0',
     'overload' => '0'
   },
-  'VERSION' => '0.305',
+  'VERSION' => '0.306',
   'test' => {
     'TESTS' => 't/*.t t/collections/*.t t/route/*.t'
   }

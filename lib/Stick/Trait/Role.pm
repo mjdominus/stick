@@ -1,6 +1,6 @@
 package Stick::Trait::Role;
 {
-  $Stick::Trait::Role::VERSION = '0.305';
+  $Stick::Trait::Role::VERSION = '0.306';
 }
 use Moose::Role;
 
@@ -21,7 +21,7 @@ Stick::Trait::Role
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

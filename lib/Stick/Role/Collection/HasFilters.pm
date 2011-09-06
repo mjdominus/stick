@@ -1,6 +1,6 @@
 package Stick::Role::Collection::HasFilters;
 {
-  $Stick::Role::Collection::HasFilters::VERSION = '0.305';
+  $Stick::Role::Collection::HasFilters::VERSION = '0.306';
 }
 use Moose::Role;
 use MooseX::Types::Moose qw(ArrayRef CodeRef);
@@ -41,7 +41,7 @@ Stick::Role::Collection::HasFilters
 
 =head1 VERSION
 
-version 0.305
+version 0.306
 
 =head1 AUTHORS
 

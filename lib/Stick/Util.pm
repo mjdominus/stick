@@ -1,4 +1,7 @@
 package Stick::Util;
+{
+  $Stick::Util::VERSION = '0.305';
+}
 # ABSTRACT: Utility functions used by Stick
 use strict;
 use warnings;
@@ -89,3 +92,38 @@ my $COMPOSITOR = MooseX::ClassCompositor->new({
 sub class { $COMPOSITOR->class_for(@_) }
 
 1;
+
+__END__
+=pod
+
+=head1 NAME
+
+Stick::Util - Utility functions used by Stick
+
+=head1 VERSION
+
+version 0.305
+
+=head1 AUTHORS
+
+=over 4
+
+=item *
+
+Ricardo Signes <rjbs@cpan.org>
+
+=item *
+
+Mark Jason Dominus <mjd@cpan.org>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2011 by Ricardo Signes, Mark Jason Dominus.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+

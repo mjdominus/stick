@@ -1,4 +1,7 @@
 package Stick::Role::Collection;
+{
+  $Stick::Role::Collection::VERSION = '0.305';
+}
 # ABSTRACT: A routable collection of objects
 use strict;
 use warnings;
@@ -160,3 +163,38 @@ role {
 };
 
 1;
+
+__END__
+=pod
+
+=head1 NAME
+
+Stick::Role::Collection - A routable collection of objects
+
+=head1 VERSION
+
+version 0.305
+
+=head1 AUTHORS
+
+=over 4
+
+=item *
+
+Ricardo Signes <rjbs@cpan.org>
+
+=item *
+
+Mark Jason Dominus <mjd@cpan.org>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2011 by Ricardo Signes, Mark Jason Dominus.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+

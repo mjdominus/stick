@@ -8,7 +8,7 @@ use Moose::Util qw(apply_all_roles);
 use Moose::Util::TypeConstraints;
 use MooseX::ClassCompositor;
 use Params::Util qw(_ARRAY0 _HASH0);
-use Scalar::Util ();
+use Scalar::Util qw(reftype);
 use Stick::Entity::Bool;
 use Stick::Entity::Nop;
 use Try::Tiny;
@@ -85,7 +85,18 @@ my $COMPOSITOR = MooseX::ClassCompositor->new({
   },
 });
 
+sub class {
+  my @args = @_;
 
-sub class { $COMPOSITOR->class_for(@_) }
+  # expand [ "Foo::Bar::Baz", { params... } ]
+  #   to   [ "Foo::Bar::Baz", "Baz", { params... } ].
+  for my $arg (@args) {
+    if (ref($arg) && reftype($arg) eq 'ARRAY' && @$arg == 2) {
+      my ($moniker) = (split /::/, $arg->[0])[-1];
+      @$arg = ($arg->[0], $moniker, $arg->[1]);
+    }
+  }
+  $COMPOSITOR->class_for(@args)
+}
 
 1;

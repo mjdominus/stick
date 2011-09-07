@@ -26,6 +26,16 @@ role {
      );
   };
 
+  method single => sub {
+    my ($self, $msg) = @_;
+    my (@items) = $self->all;
+    confess $msg
+      // sprintf("Found multiple objects in collection '%s', expected at most one",
+                 $self->collection_name)
+        if @items > 1;
+    return $items[0];
+  };
+
   method find_by => sub {
     my ($self, $attr, $val) = @_;
     return $self->filter(sub { $_->$attr eq $val });

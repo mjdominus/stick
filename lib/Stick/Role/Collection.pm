@@ -121,15 +121,6 @@ role {
     return scalar @{$self->items};
   };
 
-  method single => sub {
-    my ($self, $msg) = @_;
-    my (@items) = $self->all;
-    confess $msg
-      // "Found multiple objects in collection '$collection_name', expected at most one"
-        if @items > 1;
-    return $items[0];
-  };
-
   publish find_by_guid => { guid => Str } => sub {
     my ($self, $arg) = @_;
     my $guid = $arg->{guid};

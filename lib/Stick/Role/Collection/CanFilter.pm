@@ -25,6 +25,16 @@ role {
       filters => [ @filters ],
      );
   };
+
+  method find_by => sub {
+    my ($self, $attr, $val) = @_;
+    return $self->filter(sub { $_->$attr eq $val });
+  };
+
+  method find_one_by => sub {
+    my ($self, $attr, $val) = @_;
+    return $self->find_by($attr, $val)->single;
+  };
 };
 
 1;

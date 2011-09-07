@@ -41,9 +41,29 @@ role {
     return $self->filter(sub { $_->$attr eq $val });
   };
 
+  method find_with => sub {
+    my ($self, $attr) = @_;
+    return $self->filter(sub { $_->$attr });
+  };
+
+  method find_one_with => sub {
+    my ($self, $attr, $msg) = @_;
+    return $self->find_with($attr)->single($msg);
+  };
+
+  method find_without => sub {
+    my ($self, $attr) = @_;
+    return $self->filter(sub { not $_->$attr });
+  };
+
+  method find_one_without => sub {
+    my ($self, $attr, $msg) = @_;
+    return $self->find_without($attr)->single($msg);
+  };
+
   method find_one_by => sub {
-    my ($self, $attr, $val) = @_;
-    return $self->find_by($attr, $val)->single;
+    my ($self, $attr, $val, $msg) = @_;
+    return $self->find_by($attr, $val)->single($msg);
   };
 };
 

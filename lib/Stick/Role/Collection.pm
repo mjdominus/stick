@@ -123,23 +123,20 @@ role {
 
   publish find_by_guid => { guid => Str } => sub {
     my ($self, $arg) = @_;
-    my $guid = $arg->{guid};
-    return $self->filter(sub { $_->guid eq $guid })
-      ->single("Found multiple objects in collection '$collection_name' with guid $guid");
+    return $self->find_one_by("guid", $arg->{guid});
   };
 
   publish find_by_xid => { xid => Str } => sub {
     my ($self, $arg) = @_;
-    my $xid = $arg->{xid};
-    return $self->filter(sub { $_->xid eq $xid })
-      ->single("Found multiple objects in collection '$collection_name' with xid $xid");
+    return $self->find_one_by("xid", $arg->{xid});
  };
 
   publish find_active_by_xid => { xid => Str } => sub {
     my ($self, $arg) = @_;
     my $xid = $arg->{xid};
-    return $self->filter(sub { $_->xid eq $xid && $_->is_active })
-      ->single("Found multiple active objects in collection '$collection_name' with xid $xid");
+    return $self->find_by("xid", $xid)->find_one_with(
+      "is_active",
+      "Found multiple active objects in collection '$collection_name' with xid $xid"));
  };
 
   method STICK_PACK => sub {

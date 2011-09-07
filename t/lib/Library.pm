@@ -19,10 +19,11 @@ with (
     item => 'book',
     collection_roles => [ 'Stick::Role::Collection::Pageable',
                           'Stick::Role::Collection::Mutable',
-                          'Stick::Role::Collection::CanFilter',
+                          [ 'Stick::Role::Collection::CanFilter',
+                            { item_class => 'Book' },
+                          ],
                           't::lib::LibraryExtras',
                          ],
-    item_class => 'Book',
   });
 
 sub book_array {

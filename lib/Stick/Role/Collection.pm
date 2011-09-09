@@ -136,8 +136,8 @@ role {
     my $xid = $arg->{xid};
     return $self->find_by("xid", $xid)->find_one_with(
       "is_active",
-      "Found multiple active objects in collection '$collection_name' with xid $xid"));
- };
+      "Found multiple active objects in collection '$collection_name' with xid $xid");
+  };
 
   method STICK_PACK => sub {
     my ($self) = @_;

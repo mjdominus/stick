@@ -22,6 +22,15 @@ has length => (isa => 'Num',
                is => 'ro',
               );
 
+has binding => (isa => 'Str',
+                is => 'ro',
+               );
+
+sub is_hardback {
+  my ($self) = @_;
+  lc($self->binding) ne 'paper';
+}
+
 sub as_str {
   my ($self) = @_;
   sprintf qq{Book #%s "%s", by %s (%s pages)},

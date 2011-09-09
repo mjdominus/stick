@@ -121,24 +121,6 @@ role {
     return scalar @{$self->items};
   };
 
-  publish find_by_guid => { guid => Str } => sub {
-    my ($self, $arg) = @_;
-    return $self->find_one_by("guid", $arg->{guid});
-  };
-
-  publish find_by_xid => { xid => Str } => sub {
-    my ($self, $arg) = @_;
-    return $self->find_one_by("xid", $arg->{xid});
- };
-
-  publish find_active_by_xid => { xid => Str } => sub {
-    my ($self, $arg) = @_;
-    my $xid = $arg->{xid};
-    return $self->find_by("xid", $xid)->find_one_with(
-      "is_active",
-      "Found multiple active objects in collection '$collection_name' with xid $xid");
-  };
-
   method STICK_PACK => sub {
     my ($self) = @_;
 

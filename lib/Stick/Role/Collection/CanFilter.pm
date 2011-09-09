@@ -8,7 +8,6 @@ parameter item_class => (
   isa => Str, # name of class
   required => 1,
 );
-#    return $p->item_class->get_all_attributes;
 
 role {
   my ($p) = @_;
@@ -35,6 +34,23 @@ role {
         if @items > 1;
     return $items[0];
   };
+
+  for my $attr ($item_class->meta->get_all_attributes) {
+    my $name = $attr->name;
+    next if $name =~ /\A_/ || $name =~ /_\z/;
+    method "find_by_$name" => sub {
+      my ($self, $val) = @_;
+      # XXX uses "eq" comparator even for boolean and numeric attributes - mjd 20110909
+      return $self->find_by($name, $val);
+    };
+
+    method "find_one_by_$name" => sub {
+      my ($self, $val) = @_;
+      # XXX uses "eq" comparator even for boolean and numeric attributes - mjd 20110909
+      return $self->find_one_by($name, $val);
+    };
+
+  }
 
   method find_by => sub {
     my ($self, $attr, $val) = @_;

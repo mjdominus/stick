@@ -67,4 +67,3 @@ author: Hemingway
 title: For Whom the Bell Tolls
 length: 183
 binding: paper
-

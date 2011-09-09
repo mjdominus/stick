@@ -2,6 +2,7 @@
 use strict;
 use warnings;
 use Carp qw(confess croak);
+use Test::Fatal;
 use Test::More;
 use Test::Routine;
 use Test::Routine::Util '-all';
@@ -22,13 +23,6 @@ test "find_by" => sub {
     is(@H, 2, "Hemingway 2");
     ok(all { $_->author eq "Hemingway" } @H);
   }
-
-  { my $d = $lib->book_collection->find_one_by("author", "Dostoevsky");
-    is($d->author, "Dostoevsky", "Found unique book by Dostoevsky");
-
-    my $u = $lib->book_collection->find_one_by("author", "Rand");
-    ok(! defined($u), "No books by Rand");
-  }
 };
 
 test "find_with" => sub {
@@ -44,12 +38,35 @@ test "find_with" => sub {
 
 test "find_one_by" => sub {
   my ($self) = @_;
-  pass();
+  my $lib = $self->fresh_library(4);
+
+  { my $d = $lib->book_collection->find_one_by("author", "Dostoevsky");
+    is($d->author, "Dostoevsky", "Found unique book by Dostoevsky");
+
+    my $u = $lib->book_collection->find_one_by("author", "Rand");
+    ok(! defined($u), "No books by Rand");
+  }
+
+  like(exception { $lib->book_collection->find_one_by("author", "Hemingway") },
+       qr/Found multiple objects/,
+       "Multiple books by Hemingway");
 };
 
 test "find_one_with" => sub {
   my ($self) = @_;
-  pass();
+  my $lib = $self->fresh_library(4);
+
+  { my $d = $lib->book_collection->find_one_with("is_very_long");
+    ok($d->length > 400, "one very long book");
+  }
+
+  like(exception { $lib->book_collection->find_one_with("is_hardback") },
+       qr/Found multiple objects/,
+       "Multiple hardbacks");
+
+  like(exception { $lib->book_collection->find_one_without("is_hardback") },
+       qr/Found multiple objects/,
+       "Multiple non-hardbacks");
 };
 
 run_me;

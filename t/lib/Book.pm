@@ -31,6 +31,11 @@ sub is_hardback {
   lc($self->binding) ne 'paper';
 }
 
+sub is_very_long {
+  my ($self) = @_;
+  $self->length > 400;
+}
+
 sub as_str {
   my ($self) = @_;
   sprintf qq{Book #%s "%s", by %s (%s pages)},
